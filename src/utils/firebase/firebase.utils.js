@@ -6,16 +6,19 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-  projectId: 'crwn-clothing-db-98d4d',
-  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-  messagingSenderId: '626766232035',
-  appId: '1:626766232035:web:506621582dab103a4d08d6',
+  apiKey: "AIzaSyCvoOBUVBFmXRbH5LsXqRl7j8-uWZycCiQ",
+  authDomain: "crwn-clothing-db-446fa.firebaseapp.com",
+  projectId: "crwn-clothing-db-446fa",
+  storageBucket: "crwn-clothing-db-446fa.appspot.com",
+  messagingSenderId: "1093894837525",
+  appId: "1:1093894837525:web:1251e4263feb653031c51c",
+  measurementId: "G-MK3CE6P24J"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -74,3 +77,7 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 
   return await signInWithEmailAndPassword(auth, email, password);
 };
+
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);
