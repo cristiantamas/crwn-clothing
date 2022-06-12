@@ -20,7 +20,7 @@ const Category = () => {
   useEffect(() => {
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
-  console.log('+++Cristi', isLoading);
+
   return (
     <>
       <CategoryTitle>{category.toUpperCase()}</CategoryTitle>
