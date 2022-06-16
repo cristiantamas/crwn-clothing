@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { selectCurrentUser } from '../../store/user/user.selector';
 
-import { signOutUser } from '../../utils/firebase/firebase.utils';
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
@@ -14,7 +13,7 @@ import {
   NavLinksContainer,
   NavLink
 } from './navigation.styles.jsx';
-import { selectIsCartOpen } from '../../store/cart/cart.selector.js';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { signOutStart } from '../../store/user/user.action';
 
 const Navigation = () => {
