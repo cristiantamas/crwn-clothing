@@ -12,7 +12,7 @@ import {
   LogoContainer,
   NavLinksContainer,
   NavLink
-} from './navigation.styles.jsx';
+} from './navigation.styles';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { signOutStart } from '../../store/user/user.action';
 
