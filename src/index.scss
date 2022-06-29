@@ -4,6 +4,10 @@ body {
   font-family: 'IBM Plex Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (max-width: 800px) {
+    padding: 0.625rem;
+  }
 }
 
 code {
